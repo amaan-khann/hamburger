@@ -7,12 +7,16 @@
 }
 
 :root {
-  --primary-color: rgb(3, 91, 207);
+  --primary-color: #020122;
 }
 
 body {
   background-color: var(--primary-color);
   font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  display: none;
 }
 
 .menu-btn {
@@ -73,45 +77,92 @@ body {
 }
 
 #menu-container {
-  background-color: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
-  min-width: 100vw;
-  transition: all 1s ease-in-out;
-  display: none;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.603);
 }
 
-.menu-content {
+.menu-links {
   height: 100vh;
-  width: 100vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-links > a {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 2%;
+  border: 2px solid transparent;
+}
+
+.menu-para {
+  width: 58vw;
+  height: auto;
+  font-size: 1.2rem;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
-.menu-content > a {
+
+.menu-para > p {
+  font-size: 1.2rem;
+  margin-bottom: 5%;
+}
+
+.para-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.para-links > .right {
+  list-style-type: none;
+  width: 300px;
+  height: auto;
+  margin-left: 15%;
+}
+
+.para-links > .left {
+  list-style-type: none;
+  width: 300px;
+  height: auto;
+  margin-left: 15%;
+}
+
+.right > li > a,
+.left > li > a {
   text-decoration: none;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 15px;
+  color: whitesmoke;
+  padding: 10px;
+  border: 2px solid transparent;
+}
+
+.right > li > a:hover,
+.left > li > a:hover {
+  border: 2px solid chartreuse;
+  color: rgb(160, 158, 158);
+  transition: all 0.5s ease-in-out;
+}
+.para-links > .right > li {
+  padding: 10px;
+}
+
+.para-links > .left > li {
   padding: 10px;
 }
 
 a:hover {
   color: rgba(0, 0, 0, 0.603);
-}
-
-a:nth-child(1):hover {
-  background-color: chartreuse;
-}
-
-a:nth-child(2):hover {
-  background-color: #03f7eb;
-}
-
-a:nth-child(3):hover {
-  background-color: #ab2346;
-}
-
-a:nth-child(4):hover {
-  background-color: #f4a259;
+  border: 2px solid chartreuse;
+  color: rgb(160, 158, 158);
+  transition: all 0.5s ease-in-out;
 }
