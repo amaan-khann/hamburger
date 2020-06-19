@@ -7,16 +7,12 @@
 }
 
 :root {
-  --primary-color: #020122;
+  --primary-color: #100c08;
 }
 
 body {
   background-color: var(--primary-color);
   font-family: 'Noto Sans', sans-serif;
-}
-
-.container {
-  display: none;
 }
 
 .menu-btn {
@@ -76,6 +72,11 @@ body {
   transform: rotate(-45deg) translate(20px, 20px);
 }
 
+.container {
+  display: none;
+  overflow: hidden;
+}
+
 #menu-container {
   width: 100vw;
   height: 100vh;
@@ -99,7 +100,6 @@ body {
   text-decoration: none;
   padding: 10px;
   margin-bottom: 2%;
-  border: 2px solid transparent;
 }
 
 .menu-para {
@@ -143,13 +143,16 @@ body {
   text-decoration: none;
   color: whitesmoke;
   padding: 10px;
-  border: 2px solid transparent;
 }
 
 .right > li > a:hover,
 .left > li > a:hover {
-  border: 2px solid chartreuse;
-  color: rgb(160, 158, 158);
+  border-radius: 9px;
+  background-color: #f8f8ff;
+  color: rgb(0, 0, 0);
+  transform: scale(1.2, 1.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
 }
 .para-links > .right > li {
@@ -161,8 +164,11 @@ body {
 }
 
 a:hover {
-  color: rgba(0, 0, 0, 0.603);
-  border: 2px solid chartreuse;
-  color: rgb(160, 158, 158);
+  border-radius: 9px;
+  background-color: #f8f8ff;
+  color: rgb(0, 0, 0);
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
 }
